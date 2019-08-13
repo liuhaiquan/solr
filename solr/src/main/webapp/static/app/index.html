@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title id="pageSign">solr</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/handlebars.js"></script>
+</head>
+<body>
+        <button class="reptile">爬取CSDN博客</button>
+        <button class="createIndex">创建索引</button>
+
+        <input type="text" name="queryKey">
+        <button class="search">搜索关键字</button>
+        <table>
+            <tbody class="content-area">
+
+                <script class="content-template" type="text/x-handlebars-template">
+                    {{#row}}
+                           <a href="{{url}}" style="font-weight:bold;" target="_blank">{{parseText title}}</a>
+                            <br/>
+                           <P>{{parseText content}}</P>
+                            <br/>
+                    {{/row}}
+                </script>
+            </tbody>
+        </table>
+</body>
+</html>
